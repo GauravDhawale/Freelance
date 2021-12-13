@@ -1,0 +1,365 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+$black:#121212;
+$blue:#222433;
+$green:#00D975;
+@font-face {
+    font-family: 'M Bold';
+    src: url('/Files/Montserrat/Montserrat-Bold.ttf');
+}
+@font-face {
+    font-family: 'M medium';
+    src: url('/Files/Montserrat/Montserrat-Medium.ttf');
+}
+@font-face {
+    font-family: 'M Reg';
+    src: url('/Files/Montserrat/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: 'M Light';
+    src: url('/Files/Montserrat/Montserrat-Light.ttf');
+}
+
+body{
+    background-color: $black;
+    overflow-x: hidden;
+}
+.Nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    font-family: 'M Reg';
+    position: absolute;
+    width: 100%;
+}
+.logo img{
+    width: 100%;
+    width: 80px;
+}
+.Nav a{
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+#Home{
+    width: 100%;
+    height: 100vh;
+    background-image: url("/Files/Images/LandingBack.png");
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.landing{
+    display: flex;
+    justify-content: space-evenly;
+}
+.content{
+    text-align: center;
+}
+.content h1{
+    font-size: 70px;
+    font-family: 'M Bold';
+    font-family: 'Press Start 2P', cursive;
+}
+.content h3{
+    font-size: 30px;
+    font-family: 'M Light';
+    margin-top: 30px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 100;
+}
+button{
+    background: none;
+    border: none;
+    padding: 12px 25px;
+    font-family: 'M Reg';
+    margin-top: 50px;
+    cursor: pointer;
+}
+.normal{
+    color: white;
+    margin-left: 10px;
+}
+.CTA{
+    background-color: $green;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+.CTA:hover{
+    box-shadow: $green 0px 10px 50px;
+}
+#services,#customers{
+    color: white;
+    height: 600px;
+    text-align: center;
+    padding: 50px;
+    font-size: zpx;
+    font-family: 'M Bold';
+}
+#services{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#team{
+    background-color: white;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 500px;
+    padding: 20px 50px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'M Bold';
+}
+#team a{
+    color: $black;
+}
+#customers{
+    background-color: white;
+    color: $black;
+}
+.group{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+.tile{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding: 20px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 0.5s ease-in-out;
+    cursor: grab;
+}
+.tile:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.tile h3{
+    font-family: 'M Bold';
+    font-size: 25px;
+    margin: 5px 0;
+    transform: translate(10%,100%);
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.5s;
+}
+.tile:hover h3{
+    transform: translate(0%,0%);
+}
+.tile p{
+    font-size: 12px;
+    font-family: 'M Bold';
+    color: #838383;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.5s;
+}
+.tile i{
+    font-size: 15px;
+    margin-right: 10px;
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.8s;
+    opacity: 0;
+}
+.tile:hover p{
+    opacity: 1;
+}
+.tile:hover i{
+    opacity: 1;
+}
+.tile img{
+    width: 150px;
+    transition: 0.5s ease-in-out;
+}
+.tile:hover img{
+    transform: translate(-20%,-20%) scale(1.5);
+}
+.tile div{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 10px;
+}
+#customers{
+    position: relative;
+    padding: 50px 0%;
+}
+.Carcon{
+    position: relative;
+}
+.Carcon img{
+    width: 100px;
+    border-radius: 100px;
+}
+.Carcon h3{
+    font-size: 30px;
+}
+.Carcon p{
+    font-size: 20px;
+    font-style: italic;
+}
+footer{
+    height: 300px;
+    padding: 50px;
+    padding-top: 20px;
+    color: white;
+}
+footer img{
+    width: 150px;
+}
+footer .content{
+    text-align: start;
+}
+.content div{
+    display: flex;
+    margin: 30px 10px;
+}
+.content i{
+    color: $green;
+    margin: 0 15px;
+}
+#whyus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: $black;
+    font-family: 'M Bold';
+    font-size: 30px;
+    padding: 50px;
+    text-align: center;
+}
+#whyus p{
+    font-size: 20px;
+    padding: 50px;
+    font-family: 'M Reg';
+    width: 1100px;
+}
+.workedwith{
+    padding: 100px 0;
+}
+.workedwith img{
+    width: 150px;
+}
+.workedwith div{
+    margin: 50px 0 0 0;
+}
+.rTab{
+    position: absolute;
+    width: 100%;
+}
+.rTab img{
+    width: 100px;
+    border-radius: 100px;
+}
+.rTab p{
+    font-size: 15px;
+    text-align: center;
+    padding: 20px 200px;
+}
+.fcon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+.icon{
+    padding: 20px;
+}
+.SC{
+    padding: 10px;
+}
+.serviceTab{
+    text-align: start;
+    display: flex;
+    margin: 20px;
+}
+.serviceTab h3{
+    font-size: 25px;
+    color: $green;
+}
+.serviceTab p{
+    font-size: 15px;
+    font-family: 'M Reg';
+    width: 320px;
+    margin: 15px 0 0 0;
+    transition: 0.5s ease;
+}
+.servicecon{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.T1,.T2,.T3,.T4,.T5{
+    transition: 0.5s ease;
+}
+.aftereffect,.aftereffect .AfterTile,.T1After,.T2After,.T3After,.T4After,.T5After{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -2;
+    transition: 0.5s ease-in-out;
+}
+.AfterTile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.AfterTile h3{
+    margin: 10px 0;
+}
+.aftereffect{
+    opacity: 0;
+}
+.AfterTile p{
+    font-size: 15px;
+    width: 600px;
+    font-family: 'M Reg';
+}
+.BeforeScroll{
+    opacity: 0;
+}
+.AfterScroll{
+    opacity: 1;
+}
+//Carousel
+
+
+
+
+//Mobile
+@media only screen and (max-width: 600px){
+    .illustration{
+        display: none;
+    }
+    .content{
+        width: 100vw;
+    }
+    .content h1{
+        font-size: 30px;
+    }
+    #whyus h3{
+        font-size: 20px;
+    }
+    #whyus p{
+        width: 100vw;
+        font-size: 10px;
+    }
+}
